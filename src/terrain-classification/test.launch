@@ -1,0 +1,7 @@
+<launch>
+    <!-- <env name="PYTHONPATH" value="/home/liqi/anaconda3/envs/torch-3.9/bin/python" /> -->
+    <!-- <node name="python_node" pkg="terrain-classification" type="use_elixir.py" output="screen" args ="$(arg PYTHONPATH)" /> -->
+    <env name="ROS_PYTHON_VERSION" value="3" />
+    <env name="ROS_PYTHON_EXECUTABLE" value="/home/liqi/anaconda3/envs/torch-3.9/bin/python3" />
+    <node name="python_node" pkg="terrain-classification" type="use_elixir.py" output="screen" />
+</launch>
