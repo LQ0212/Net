@@ -1,10 +1,5 @@
 #!/home/liqi/anaconda3/envs/torch-3.9/bin/python3
 import os
-conda_env = 'torch-3.9'  # 指定你的Conda环境名称
-
-# 设置PATH环境变量包括Conda环境
-os.environ['PATH'] = f'/home/liqi/anaconda3/envs/{conda_env}/bin:' + os.environ['PATH']
-print(1)
 import torch
 import torch.nn as nn
 import torchvision
@@ -124,33 +119,3 @@ if __name__ == '__main__':
     # 停止并释放资源
     pipeline.stop()
     cv2.destroyAllWindows()
-    # 裁剪下方中间的 224x224 区域
-    
-    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    # # 归一化 RGB 数据
-    # normalized_data = cropped_data.astype(np.float32) / 255.0
-    # # build model
-    # model = models.mobilenet_v2(weights=models.MobileNet_V2_Weights.DEFAULT)
-    # # for child in model.named_children():
-    # #     print(child)
-    # classifier = nn.Sequential(
-    #     nn.Dropout(0.25),
-    #     nn.Linear(1280, 32),
-    #     nn.Linear(32, 5),
-    # )
-    # model.classifier = classifier
-    # print("classifier changes: ", model.classifier)
-    # Label_list = ['brick', 'grass', 'gravel', 'others', 'sand']
-    # # My_net = AlexNet()
-    # model = model.to(device)
-    # test_net = model
-    # test_net = test_net.to(device)
-    # test_net.eval()
-    # test_net.load_state_dict(torch.load('./model_ALexNet.pth'))
-    # t_output = test_net(normalized_data)
-    # _, t_predict_label = torch.max(t_output, 1)
-    # t_predict_label = t_predict_label.cpu()
-    # t_predict_label = t_predict_label.numpy()
-    # Predict_label = Label_list[t_predict_label[0]]
-    # title_str = 'Predict label:' + Predict_label
-    # imshow(t_img_to_show, title_str)
